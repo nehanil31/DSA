@@ -1,0 +1,18 @@
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        ans=1.0
+        m=n
+        if m<0:
+            m=-1*m
+        while m>0:
+            if m%2!=0:
+                ans=ans*x
+                m=m-1
+            else:
+                x=x*x
+                
+                m=m//2
+               
+        if n<0:
+            return 1.0/ans
+        return ans                       
